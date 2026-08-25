@@ -187,7 +187,7 @@ function getFetch(url: string, opts: FetchOptions, localFetch?: typeof globalThi
       return localFetch
   }
 
-  return globalThis.$fetch || ofetch
+  return globalThis.$fetch ?? ofetch
 }
 
 export function fillPath(path: string, params: Record<string, string> = {}) {
